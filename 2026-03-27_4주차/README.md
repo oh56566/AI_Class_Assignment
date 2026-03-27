@@ -83,12 +83,49 @@ Age(0~80), Fare(0~512), Pclass(1~3) 등 단위가 달라 표준화가 필요했�
 
 테스트 셋: 전체 891개 중 25% (223개), `random_state=42`, `stratify` 미적용
 
-
-| 모델 | 전체 Feature (8개) | 전체 F1(macro) | 상관관계 Feature (3개) | 상관관계 F1(macro) | 변화 |
-|---|---|---|---|---|---|
-| Logistic Regression | 80.7% | 0.80 | 78.0% | 0.77 | ▼ 2.7%p |
-| Decision Tree | 77.6% | 0.76 | 82.1% | 0.81 | ▲ 4.5%p |
-| Random Forest | 78.9% | 0.78 | 82.5% | 0.82 | ▲ 3.6%p |
+<img width="830" height="516" alt="image" src="https://github.com/user-attachments/assets/4eafe581-0fca-422c-869f-c4bcce809eaa" />
+<table style="width:100%; border-collapse: collapse; font-size: 14px;">
+  <thead>
+    <tr>
+      <th rowspan="2" style="border: 1px solid #ccc; padding: 10px 14px; text-align: left; background: #f5f5f5;">모델</th>
+      <th colspan="2" style="border: 1px solid #ccc; padding: 10px 14px; text-align: center; background: #dbeafe; color: #1e40af;">전체 Feature (8개)</th>
+      <th colspan="2" style="border: 1px solid #ccc; padding: 10px 14px; text-align: center; background: #dcfce7; color: #166534;">상관관계 Feature (3개)</th>
+      <th rowspan="2" style="border: 1px solid #ccc; padding: 10px 14px; text-align: center; background: #f5f5f5;">변화</th>
+    </tr>
+    <tr>
+      <th style="border: 1px solid #ccc; padding: 8px 14px; text-align: center; background: #eff6ff; color: #1e40af; font-weight: normal; font-size: 13px;">정확도</th>
+      <th style="border: 1px solid #ccc; padding: 8px 14px; text-align: center; background: #eff6ff; color: #1e40af; font-weight: normal; font-size: 13px;">F1(macro)</th>
+      <th style="border: 1px solid #ccc; padding: 8px 14px; text-align: center; background: #f0fdf4; color: #166534; font-weight: normal; font-size: 13px;">정확도</th>
+      <th style="border: 1px solid #ccc; padding: 8px 14px; text-align: center; background: #f0fdf4; color: #166534; font-weight: normal; font-size: 13px;">F1(macro)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 10px 14px; font-weight: 500;">Logistic Regression</td>
+      <td style="border: 1px solid #ccc; padding: 10px 14px; text-align: center;">80.7%</td>
+      <td style="border: 1px solid #ccc; padding: 10px 14px; text-align: center;">0.80</td>
+      <td style="border: 1px solid #ccc; padding: 10px 14px; text-align: center;">78.0%</td>
+      <td style="border: 1px solid #ccc; padding: 10px 14px; text-align: center;">0.77</td>
+      <td style="border: 1px solid #ccc; padding: 10px 14px; text-align: center; color: #991b1b; font-weight: 500;">▼ 2.7%p</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 10px 14px; font-weight: 500;">Decision Tree</td>
+      <td style="border: 1px solid #ccc; padding: 10px 14px; text-align: center;">77.6%</td>
+      <td style="border: 1px solid #ccc; padding: 10px 14px; text-align: center;">0.76</td>
+      <td style="border: 1px solid #ccc; padding: 10px 14px; text-align: center;">82.1%</td>
+      <td style="border: 1px solid #ccc; padding: 10px 14px; text-align: center;">0.81</td>
+      <td style="border: 1px solid #ccc; padding: 10px 14px; text-align: center; color: #166534; font-weight: 500;">▲ 4.5%p</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 10px 14px; font-weight: 500;">Random Forest</td>
+      <td style="border: 1px solid #ccc; padding: 10px 14px; text-align: center;">78.9%</td>
+      <td style="border: 1px solid #ccc; padding: 10px 14px; text-align: center;">0.78</td>
+      <td style="border: 1px solid #ccc; padding: 10px 14px; text-align: center;">82.5%</td>
+      <td style="border: 1px solid #ccc; padding: 10px 14px; text-align: center;">0.82</td>
+      <td style="border: 1px solid #ccc; padding: 10px 14px; text-align: center; color: #166534; font-weight: 500;">▲ 3.6%p</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Logistic Regression
 

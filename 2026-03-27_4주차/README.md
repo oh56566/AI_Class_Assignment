@@ -56,7 +56,7 @@ X_train = scaler.fit_transform(X_train)
 X_test  = scaler.transform(X_test)   # fit 없이 transform만
 ```
 
-Age(0~80), Fare(0~512), Pclass(1~3) 등 단위가 달라 표준화가 필요했다. 테스트 데이터에 `fit`을 재수행하면 데이터 누수(data leakage)가 발생하므로 `transform`만 적용했다.
+Age(0-80), Fare(0-512), Pclass(1~3) 등 단위가 달라 표준화가 필요했다. 테스트 데이터에 `fit`을 재수행하면 데이터 누수(data leakage)가 발생하므로 `transform`만 적용했다.
 
 ---
 
